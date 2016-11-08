@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="index.css"/>
+    <title>Exercice 1</title>
+  </head>
+  <body>
+
+          <!--      EXO1         -->
+
+      <img src="image1.jpg" onmouseover="mover(this)" onmouseout="moutmout(this)" id="image1"/>
+
+      <a href="#" onclick="showStuff()" >Afficher</a>
+      <a href="#" onclick="hideStuff()">Masquer</a>
+        <div id="texte">
+          <p>Joseph Dacre Carlyle (Carlisle, 4 juin 1758 - Newcastle upon Tyne, 12 avril 1804) est un orientaliste anglais.Après ses études à l'université de Cambridge, il y devint professeur d'arabe. En 1799, il fut attaché par le gouvernement britannique à l'ambassade de Lord Elgin dans l'Empire ottoman. Il était chargé d'explorer les bibliothèques de la région (principalement celle du Sérail) pour y découvrir (et y acquérir) des manuscrits inédits de textes antiques. Il se rendit aussi en Égypte, en Terre sainte et au mont Athos. Sa mission fut, de son point de vue, un échec. Il acheta quelques centaines d'ouvrages, principalement dans les bazars de Constantinople, mais aucun ne contenait de texte inédit. Cependant, la façon dont certains manuscrits avaient été acquis, principalement ceux du patriarche de Jérusalem Anthème Ier, ainsi que la querelle entamée sur la plaine de Troie entre Carlyle et un autre professeur de Cambridge, Edward Daniel Clarke, allaient être utilisées, après la mort de Carlyle, contre Lord Elgin, dans les controverses autour de l'acquisition des « marbres d'Elgin ».De retour en Grande-Bretagne à l'automne 1801, Joseph Dacre Carlyle entama une traduction en arabe de la Bible. Sa mort en avril 1804 coupa court à ce travail.</p>
+      </div>
+
+
+      <div id="texte1">
+      <p>Tara, originellement nommée Antarctica puis Seamaster, est une goélette française destinée à la fois à l'exploration et à la défense de l'environnement. Dans le cadre de l'Année polaire internationale, en 2007-2008, ce voilier est utilisé en Arctique par l'expédition Tara Arctic dans le but de faire des relevés permettant de mieux comprendre les changements climatiques qui s'opèrent en Arctique. En 2009, dans le cadre de l'expédition Tara Oceans, Tara parcourt les mers et les océans dans une circumnavigation de trois ans afin d'étudier le piégeage des molécules de gaz carbonique (CO2) par les micro-organismes marins comme le plancton. En avril 2016, une nouvelle expédition est montée Tara Pacific dont l'objectif est de comprendre le corail, menacé par des facteurs humains et climatiques1.</p>
+      </div>
+      <div>
+      <div class="color green" onclick="couleur1()"></div>
+      <div class="color red" onclick="couleur2()"></div>
+      <div class="color blue" onclick="couleur3()"></div>
+      </div>
+
+      <form>
+         <label for="motdepasse">Votre mot de passe : </label><input type="text" name="motdepasse" value="" id="motdepasse" />
+         <label for="confirmation">Confirmez : </label><input type="text" name="confirmation" value="" id="confirmation" />
+         <button type="button" name="button" onclick="verifdemot()" id="boutonton" >Vérification</button>
+     </form>
+
+          <!-- SCRIPT -->
+      <script>
+
+           ////////////////// EXO 1 ////////////////
+
+          function mover() {
+          document.getElementById('image1').style.border = "3px solid red";
+          };
+          function moutmout() {
+          document.getElementById('image1').style.border = "";
+          };
+
+         ////////////////// EXO 2 ////////////////
+
+          function showStuff() {
+          document.getElementById("texte").style.visibility = "visible";
+          };
+          function hideStuff() {
+          document.getElementById("texte").style.visibility = "hidden";
+          };
+
+          //////////////// EXO 3 ////////////////////
+
+          function couleur1() {
+            document.getElementById('texte1').style.color = "green";
+          };
+          function couleur2() {
+            document.getElementById('texte1').style.color = "red";
+          };
+          function couleur3() {
+            document.getElementById('texte1').style.color = "blue";
+          };
+
+         //////////////// EXO 4 ////////////////////
+
+         function verifdemot() {
+           var mot = document.getElementById("motdepasse").value;
+           var mot2 = document.getElementById("confirmation").value;
+           if (mot === mot2) {
+             document.getElementById('motdepasse').style.border = "3px solid green";
+             document.getElementById('confirmation').style.border = "3px solid green";
+           }
+           else {
+             document.getElementById('motdepasse').style.border = "3px solid red";
+              document.getElementById('confirmation').style.border = "3px solid red";
+           }
+         };
+
+
+      </script>
+  </body>
+</html>
